@@ -18,7 +18,7 @@ import PropTypes from "prop-types";
 
 StarWars.propTypes = {
   title: PropTypes.string,
-  btn: PropTypes.func,
+  widgetid: PropTypes.string,
 };
 
 customElements.define(

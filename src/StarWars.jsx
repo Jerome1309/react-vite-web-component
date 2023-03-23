@@ -21,13 +21,19 @@ const StarWars = (props) => {
   };
 
   const sendData = () => {
-    props.btn("data from webcomponent");
+    var event = new CustomEvent("onWidgetBtnClick", {
+      detail: "Example of an event from the web component",
+    });
+
+    const el = document.getElementById(props.widgetid);
+    el.dispatchEvent(event);
   };
 
   return (
-    <div>
-      <h1>React web component</h1>
+    <div id={props.widgetid}>
+      <h1>React web component v5</h1>
       <h2>{props.title}</h2>
+      <h3>Widget id: {props.widgetid}</h3>
       {data && (
         <>
           <p>
