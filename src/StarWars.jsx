@@ -31,22 +31,24 @@ const StarWars = (props) => {
   };
 
   return (
-    <root.div id={props.widgetid} className="global">
+    <root.div id={props.widgetid}>
       <style type="text/css">{styles}</style>
-      <h1>React web component v5</h1>
-      <h2>{props.title}</h2>
-      <h3>Widget id: {props.widgetid}</h3>
-      {data && (
-        <>
-          <p>
-            Name: <span className="name">{data.name}</span>
-          </p>
-          <p>Model: {data.model}</p>
-          <p>Length: {data.length}</p>
-        </>
-      )}
+      <div className="global">
+        <h1>React web component v5</h1>
+        <h2>{props.title}</h2>
+        <h3>Widget id: {props.widgetid}</h3>
+        {data && (
+          <>
+            <p>
+              Name: <span className="name">{data.name}</span>
+            </p>
+            <p>Model: {data.model}</p>
+            <p>Length: {data.length}</p>
+          </>
+        )}
 
-      <button onClick={sendData}>Click me</button>
+        <button onClick={sendData}>Click me</button>
+      </div>
     </root.div>
   );
 };
