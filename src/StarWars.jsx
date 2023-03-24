@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import styles from "./StarWars.module.css";
+import styles from "./StarWars.scss";
+import root from "react-shadow";
 
 const StarWars = (props) => {
   const [data, setData] = useState();
@@ -30,14 +31,15 @@ const StarWars = (props) => {
   };
 
   return (
-    <div id={props.widgetid}>
+    <root.div id={props.widgetid} className="global">
+      <style type="text/css">{styles}</style>
       <h1>React web component v5</h1>
       <h2>{props.title}</h2>
       <h3>Widget id: {props.widgetid}</h3>
       {data && (
         <>
           <p>
-            Name: <span className={styles.name}>{data.name}</span>
+            Name: <span className="name">{data.name}</span>
           </p>
           <p>Model: {data.model}</p>
           <p>Length: {data.length}</p>
@@ -45,7 +47,7 @@ const StarWars = (props) => {
       )}
 
       <button onClick={sendData}>Click me</button>
-    </div>
+    </root.div>
   );
 };
 

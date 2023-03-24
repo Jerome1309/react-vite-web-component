@@ -11,7 +11,6 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
 import reactToWebComponent from "react-to-webcomponent";
 import StarWars from "./StarWars";
 import PropTypes from "prop-types";

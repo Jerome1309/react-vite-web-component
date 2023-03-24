@@ -1,0 +1,16 @@
+.global {
+  all: initial;
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  .name {
+    font-weight: bold;
+    color: orange;
+  }
+}
+
+button {
+  background-color: red;
+}
